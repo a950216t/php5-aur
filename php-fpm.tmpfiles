@@ -1,1 +1,1 @@
-d /run/php5-fpm 755 root root
+d /run/php-fpm5 755 root root

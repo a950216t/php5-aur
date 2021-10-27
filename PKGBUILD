@@ -340,7 +340,7 @@ package_php5-cgi() {
   depends=("${pkgbase}")
   provides=("${_pkgbase}-cgi=$pkgver")
 
-  install -D -m755 ${srcdir}/build-cgi/sapi/cgi/php-cgi ${pkgdir}/usr/bin/${pkgbase}-cgi
+  install -D -m755 ${srcdir}/build-cgi/sapi/cgi/php-cgi ${pkgdir}/usr/bin/php-cgi5
 }
 
 package_php5-apache() {
@@ -362,17 +362,17 @@ package_php5-fpm() {
   install='php-fpm.install'
 
   install -d -m755 ${pkgdir}/usr/bin
-  install -D -m755 ${srcdir}/build-fpm/sapi/fpm/php-fpm ${pkgdir}/usr/bin/${pkgbase}-fpm
+  install -D -m755 ${srcdir}/build-fpm/sapi/fpm/php-fpm ${pkgdir}/usr/bin/php-fpm5
 
-  install -D -m644 ${srcdir}/build-fpm/sapi/fpm/php-fpm.8 ${pkgdir}/usr/share/man/man8/${pkgbase}-fpm.8
+  install -D -m644 ${srcdir}/build-fpm/sapi/fpm/php-fpm.8 ${pkgdir}/usr/share/man/man8/php-fpm5.8
   install -D -m644 ${srcdir}/build-fpm/sapi/fpm/php-fpm.conf ${pkgdir}/etc/${pkgbase}/php-fpm.conf
 
   install -d -m755 ${pkgdir}/etc/${pkgbase}/fpm.d
-  install -D -m644 ${srcdir}/php-fpm.tmpfiles ${pkgdir}/usr/lib/tmpfiles.d/${pkgbase}-fpm.conf
-  install -D -m644 ${srcdir}/php-fpm.service ${pkgdir}/usr/lib/systemd/system/${pkgbase}-fpm.service
+  install -D -m644 ${srcdir}/php-fpm.tmpfiles ${pkgdir}/usr/lib/tmpfiles.d/php-fpm5.conf
+  install -D -m644 ${srcdir}/php-fpm.service ${pkgdir}/usr/lib/systemd/system/php-fpm5.service
 
   install -d -m755 ${pkgdir}/etc/logrotate.d
-  install -D -m644 ${srcdir}/logrotate.d.php-fpm ${pkgdir}/etc/logrotate.d/${pkgbase}-fpm
+  install -D -m644 ${srcdir}/logrotate.d.php-fpm ${pkgdir}/etc/logrotate.d/php-fpm5
 }
 
 package_php5-embed() {
@@ -390,7 +390,7 @@ package_php5-phpdbg() {
   provides=("${_pkgbase}-phpdbg=$pkgver")
 
   install -d -m755 ${pkgdir}/usr/bin
-  install -D -m755 ${srcdir}/build-phpdbg/sapi/phpdbg/phpdbg ${pkgdir}/usr/bin/${pkgbase}dbg
+  install -D -m755 ${srcdir}/build-phpdbg/sapi/phpdbg/phpdbg ${pkgdir}/usr/bin/phpdbg5
 }
 
 package_php5-dblib() {
