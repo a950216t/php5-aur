@@ -1,6 +1,8 @@
 # php5-aur
 a php 5.6 arch linux aur repository
 
+pacman -S base-devel
+
 git clone --recursive https://github.com/a950216t/php5-aur
 
 cd php5-aur/
