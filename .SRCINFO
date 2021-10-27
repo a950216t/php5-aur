@@ -1,4 +1,4 @@
-pkgbase = php56
+pkgbase = php5
 	pkgdesc = A general-purpose scripting language that is especially suited to web development
 	pkgver = 5.6.40
 	pkgrel = 1
@@ -41,7 +41,7 @@ pkgbase = php56
 	source = php-fpm.tmpfiles
 	source = use-enchant2.patch
 	source = php-freetype-2.9.1.patch
-	source = https://raw.githubusercontent.com/centminmod/centminmod/123.09beta01/patches/php/php5640-mysqlnd-fix.patch
+	source = https://raw.githubusercontent.com/centminmod/centminmod/123.09beta01/patches/php/php540-mysqlnd-fix.patch
 	validpgpkeys = 6E4F6AB321FDC07F2C332E3AC2BF0BC433CFC8B3
 	validpgpkeys = 0BD78B5F97500D450838F95DFE857D9A90D90EC1
 	md5sums = c7dde3afb16ce7b761abf2805125d372
@@ -78,7 +78,7 @@ pkgbase = php56
 	sha512sums = 0a06189f6fb3513cd2dcf9ddb590360475e2dd9a7aa8b13ab66c389c1ed40ce2361681f017cd3c6219f5b40a0a9d4978e57ca3ee4bacb7657db3285136fd2875
 	sha512sums = 14720eff3bc90106c6740017344e01f678090c4b07dd4ba5d91d65b194829032a0e458f333f8c14e12279a5e0f526de9792e43f22eb2a2db48285e34a2e148e2
 
-pkgname = php56
+pkgname = php5
 	pkgdesc = An HTML-embedded scripting language
 	depends = pcre
 	depends = libxml2
@@ -86,135 +86,135 @@ pkgname = php56
 	depends = libzip
 	depends = openssl-1.0
 	provides = php=5.6.40
-	backup = etc/php56/php.ini
+	backup = etc/php5/php.ini
 
-pkgname = php56-cgi
+pkgname = php5-cgi
 	pkgdesc = CGI and FCGI SAPI for PHP
-	depends = php56
+	depends = php5
 	provides = php-cgi=5.6.40
 
-pkgname = php56-apache
+pkgname = php5-apache
 	pkgdesc = Apache SAPI for PHP
 	install = php-apache.install
-	depends = php56
+	depends = php5
 	depends = apache
 	depends = libnsl
 	provides = php-apache=5.6.40
-	backup = etc/httpd/conf/extra/php56_module.conf
+	backup = etc/httpd/conf/extra/php5_module.conf
 
-pkgname = php56-fpm
+pkgname = php5-fpm
 	pkgdesc = FastCGI Process Manager for PHP
 	install = php-fpm.install
-	depends = php56
+	depends = php5
 	depends = systemd
 	provides = php-fpm=5.6.40
-	backup = etc/php56/php-fpm.conf
+	backup = etc/php5/php-fpm.conf
 
-pkgname = php56-embed
+pkgname = php5-embed
 	pkgdesc = Embedded PHP SAPI library
-	depends = php56
+	depends = php5
 	depends = libnsl
 	provides = php-embed=5.6.40
 
-pkgname = php56-phpdbg
+pkgname = php5-phpdbg
 	pkgdesc = Interactive PHP debugger
-	depends = php56
+	depends = php5
 	provides = php-phpdbg=5.6.40
 
-pkgname = php56-dblib
+pkgname = php5-dblib
 	pkgdesc = dblib module for PHP
-	depends = php56
+	depends = php5
 	depends = freetds
 	provides = php-dblib=5.6.40
 
-pkgname = php56-pear
+pkgname = php5-pear
 	pkgdesc = PHP Extension and Application Repository
-	depends = php56
+	depends = php5
 	provides = php-pear=5.6.40
-	backup = etc/php56/pear.conf
+	backup = etc/php5/pear.conf
 
-pkgname = php56-enchant
+pkgname = php5-enchant
 	pkgdesc = enchant module for PHP
-	depends = php56
+	depends = php5
 	depends = enchant
 	provides = php-enchant=5.6.40
 
-pkgname = php56-gd
+pkgname = php5-gd
 	pkgdesc = gd module for PHP
-	depends = php56
+	depends = php5
 	depends = gd
 	provides = php-gd=5.6.40
 
-pkgname = php56-imap
+pkgname = php5-imap
 	pkgdesc = imap module for PHP
-	depends = php56
+	depends = php5
 	depends = c-client
 	provides = php-imap=5.6.40
 
-pkgname = php56-intl
+pkgname = php5-intl
 	pkgdesc = intl module for PHP
-	depends = php56
+	depends = php5
 	depends = icu
 	provides = php-intl=5.6.40
 
-pkgname = php56-ldap
+pkgname = php5-ldap
 	pkgdesc = ldap module for PHP
-	depends = php56
+	depends = php5
 	depends = libldap
-	provides = php56-ldap=5.6.40
+	provides = php5-ldap=5.6.40
 
-pkgname = php56-mcrypt
+pkgname = php5-mcrypt
 	pkgdesc = mcrypt module for PHP
-	depends = php56
+	depends = php5
 	depends = libmcrypt
 	depends = libltdl
 	provides = php-mcrypt=5.6.40
 
-pkgname = php56-mssql
+pkgname = php5-mssql
 	pkgdesc = mssql module for PHP
-	depends = php56
+	depends = php5
 	depends = freetds
 	provides = php-mssql=5.6.40
 
-pkgname = php56-odbc
+pkgname = php5-odbc
 	pkgdesc = ODBC modules for PHP
-	depends = php56
+	depends = php5
 	depends = unixodbc
 	provides = php-odbc=5.6.40
 
-pkgname = php56-pgsql
+pkgname = php5-pgsql
 	pkgdesc = PostgreSQL modules for PHP
-	depends = php56
+	depends = php5
 	depends = postgresql-libs
 	provides = php-pgsql=5.6.40
 
-pkgname = php56-pspell
+pkgname = php5-pspell
 	pkgdesc = pspell module for PHP
-	depends = php56
+	depends = php5
 	depends = aspell
 	provides = php-pspell=5.6.40
 
-pkgname = php56-snmp
+pkgname = php5-snmp
 	pkgdesc = snmp module for PHP
-	depends = php56
+	depends = php5
 	depends = net-snmp
 	provides = php-snmp=5.6.40
 
-pkgname = php56-sqlite
+pkgname = php5-sqlite
 	pkgdesc = sqlite module for PHP
-	depends = php56
+	depends = php5
 	depends = sqlite
 	provides = php-sqlite=5.6.40
 
-pkgname = php56-tidy
+pkgname = php5-tidy
 	pkgdesc = tidy module for PHP
-	depends = php56
+	depends = php5
 	depends = tidyhtml
 	provides = php-tidy=5.6.40
 
-pkgname = php56-xsl
+pkgname = php5-xsl
 	pkgdesc = xsl module for PHP
-	depends = php56
+	depends = php5
 	depends = libxslt
 	provides = php-xsl=5.6.40
 

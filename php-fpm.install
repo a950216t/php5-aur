@@ -1,6 +1,6 @@
 post_install() {
-	if [[ ! -d run/php56-fpm ]]; then
-		usr/bin/systemd-tmpfiles --create php56-fpm.conf
+	if [[ ! -d run/php5-fpm ]]; then
+		usr/bin/systemd-tmpfiles --create php5-fpm.conf
 	fi
 }
 
