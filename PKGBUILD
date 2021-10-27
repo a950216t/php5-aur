@@ -4,11 +4,11 @@
 # Contributor: Jörg Schuck <joerg_schuck [at] web.de>
 #
 # Changes from 2016-01-10, by Thore Bödecker:
-#   reworked everything to allow php56 to co-exist with upstream php packages
+#   reworked everything to allow php5 to co-exist with upstream php packages
 
 
-pkgbase=php56
-_pkgbase="${pkgbase%56}"
+pkgbase=php5
+_pkgbase="${pkgbase%5}"
 pkgname=("${pkgbase}"
          "${pkgbase}-cgi"
          "${pkgbase}-apache"
@@ -48,7 +48,7 @@ source=("https://secure.php.net/distributions/${_pkgbase}-${pkgver}.tar.xz"
         'logrotate.d.php-fpm' 'php-fpm.service' 'php-fpm.tmpfiles'
         'use-enchant2.patch'
         'php-freetype-2.9.1.patch'
-        'https://raw.githubusercontent.com/centminmod/centminmod/123.09beta01/patches/php/php5640-mysqlnd-fix.patch')
+        'https://raw.githubusercontent.com/centminmod/centminmod/master/patches/php/php5640-mysqlnd-fix.patch')
 validpgpkeys=('6E4F6AB321FDC07F2C332E3AC2BF0BC433CFC8B3'
               '0BD78B5F97500D450838F95DFE857D9A90D90EC1')
 md5sums=('c7dde3afb16ce7b761abf2805125d372'
@@ -292,7 +292,7 @@ check() {
   "${srcdir}"/build-php/sapi/cli/php -n run-tests.php -n -P tests
 }
 
-package_php56() {
+package_php5() {
   pkgdesc='An HTML-embedded scripting language'
   depends=('pcre' 'libxml2' 'curl' 'libzip' 'openssl-1.0')
   backup=("etc/${pkgbase}/php.ini")
@@ -335,7 +335,7 @@ package_php56() {
   sed -i "/^\[  --with-php-config=/c \[  --with-php-config=PATH  Path to php-config [${pkgbase/php/php-config}]], ${pkgbase/php/php-config}, no)" ${pkgdir}/usr/lib/${pkgbase}/build/phpize.m4
 }
 
-package_php56-cgi() {
+package_php5-cgi() {
   pkgdesc='CGI and FCGI SAPI for PHP'
   depends=("${pkgbase}")
   provides=("${_pkgbase}-cgi=$pkgver")
@@ -343,7 +343,7 @@ package_php56-cgi() {
   install -D -m755 ${srcdir}/build-cgi/sapi/cgi/php-cgi ${pkgdir}/usr/bin/${pkgbase}-cgi
 }
 
-package_php56-apache() {
+package_php5-apache() {
   pkgdesc='Apache SAPI for PHP'
   depends=("${pkgbase}" 'apache' 'libnsl')
   provides=("${_pkgbase}-apache=$pkgver")
@@ -354,7 +354,7 @@ package_php56-apache() {
   install -D -m644 ${srcdir}/apache.conf ${pkgdir}/etc/httpd/conf/extra/${pkgbase}_module.conf
 }
 
-package_php56-fpm() {
+package_php5-fpm() {
   pkgdesc='FastCGI Process Manager for PHP'
   depends=("${pkgbase}" 'systemd')
   provides=("${_pkgbase}-fpm=$pkgver")
@@ -375,16 +375,16 @@ package_php56-fpm() {
   install -D -m644 ${srcdir}/logrotate.d.php-fpm ${pkgdir}/etc/logrotate.d/${pkgbase}-fpm
 }
 
-package_php56-embed() {
+package_php5-embed() {
   pkgdesc='Embedded PHP SAPI library'
   depends=("${pkgbase}" 'libnsl')
   provides=("${_pkgbase}-embed=$pkgver")
 
-  install -D -m755 ${srcdir}/build-embed/libs/libphp5.so ${pkgdir}/usr/lib/libphp56.so
+  install -D -m755 ${srcdir}/build-embed/libs/libphp5.so ${pkgdir}/usr/lib/libphp5.so
   install -D -m644 ${srcdir}/${_pkgbase}-${pkgver}/sapi/embed/php_embed.h ${pkgdir}/usr/include/${pkgbase}/sapi/embed/php_embed.h
 }
 
-package_php56-phpdbg() {
+package_php5-phpdbg() {
   pkgdesc='Interactive PHP debugger'
   depends=("${pkgbase}")
   provides=("${_pkgbase}-phpdbg=$pkgver")
@@ -393,7 +393,7 @@ package_php56-phpdbg() {
   install -D -m755 ${srcdir}/build-phpdbg/sapi/phpdbg/phpdbg ${pkgdir}/usr/bin/${pkgbase}dbg
 }
 
-package_php56-dblib() {
+package_php5-dblib() {
   pkgdesc='dblib module for PHP'
   depends=("${pkgbase}" 'freetds')
   provides=("${_pkgbase}-dblib=$pkgver")
@@ -401,7 +401,7 @@ package_php56-dblib() {
   install -D -m755 ${srcdir}/build-php/modules/pdo_dblib.so ${pkgdir}/usr/lib/${pkgbase}/modules/pdo_dblib.so
 }
 
-package_php56-pear() {
+package_php5-pear() {
   pkgdesc='PHP Extension and Application Repository'
   depends=("${pkgbase}")
   provides=("${_pkgbase}-pear=$pkgver")
@@ -416,7 +416,7 @@ package_php56-pear() {
   mv ${pkgdir}/usr/bin/{pecl,${pkgbase/php/pecl}}
 }
 
-package_php56-enchant() {
+package_php5-enchant() {
   pkgdesc='enchant module for PHP'
   depends=("${pkgbase}" 'enchant')
   provides=("${_pkgbase}-enchant=$pkgver")
@@ -424,7 +424,7 @@ package_php56-enchant() {
   install -D -m755 ${srcdir}/build-php/modules/enchant.so ${pkgdir}/usr/lib/${pkgbase}/modules/enchant.so
 }
 
-package_php56-gd() {
+package_php5-gd() {
   pkgdesc='gd module for PHP'
   depends=("${pkgbase}" 'gd')
   provides=("${_pkgbase}-gd=$pkgver")
@@ -432,7 +432,7 @@ package_php56-gd() {
   install -D -m755 ${srcdir}/build-php/modules/gd.so ${pkgdir}/usr/lib/${pkgbase}/modules/gd.so
 }
 
-package_php56-imap() {
+package_php5-imap() {
   pkgdesc='imap module for PHP'
   depends=("${pkgbase}" 'c-client')
   provides=("${_pkgbase}-imap=$pkgver")
@@ -440,7 +440,7 @@ package_php56-imap() {
   install -D -m755 ${srcdir}/build-php/modules/imap.so ${pkgdir}/usr/lib/${pkgbase}/modules/imap.so
 }
 
-package_php56-intl() {
+package_php5-intl() {
   pkgdesc='intl module for PHP'
   depends=("${pkgbase}" 'icu')
   provides=("${_pkgbase}-intl=$pkgver")
@@ -448,7 +448,7 @@ package_php56-intl() {
   install -D -m755 ${srcdir}/build-php/modules/intl.so ${pkgdir}/usr/lib/${pkgbase}/modules/intl.so
 }
 
-package_php56-ldap() {
+package_php5-ldap() {
   pkgdesc='ldap module for PHP'
   depends=("${pkgbase}" 'libldap')
   provides=("${pkgbase}-ldap=$pkgver")
@@ -456,7 +456,7 @@ package_php56-ldap() {
   install -D -m755 ${srcdir}/build-php/modules/ldap.so ${pkgdir}/usr/lib/${pkgbase}/modules/ldap.so
 }
 
-package_php56-mcrypt() {
+package_php5-mcrypt() {
   pkgdesc='mcrypt module for PHP'
   depends=("${pkgbase}" 'libmcrypt' 'libltdl')
   provides=("${_pkgbase}-mcrypt=$pkgver")
@@ -464,7 +464,7 @@ package_php56-mcrypt() {
   install -D -m755 ${srcdir}/build-php/modules/mcrypt.so ${pkgdir}/usr/lib/${pkgbase}/modules/mcrypt.so
 }
 
-package_php56-mssql() {
+package_php5-mssql() {
   pkgdesc='mssql module for PHP'
   depends=("${pkgbase}" 'freetds')
   provides=("${_pkgbase}-mssql=$pkgver")
@@ -472,7 +472,7 @@ package_php56-mssql() {
   install -D -m755 ${srcdir}/build-php/modules/mssql.so ${pkgdir}/usr/lib/${pkgbase}/modules/mssql.so
 }
 
-package_php56-odbc() {
+package_php5-odbc() {
   pkgdesc='ODBC modules for PHP'
   depends=("${pkgbase}" 'unixodbc')
   provides=("${_pkgbase}-odbc=$pkgver")
@@ -481,7 +481,7 @@ package_php56-odbc() {
   install -D -m755 ${srcdir}/build-php/modules/pdo_odbc.so ${pkgdir}/usr/lib/${pkgbase}/modules/pdo_odbc.so
 }
 
-package_php56-pgsql() {
+package_php5-pgsql() {
   pkgdesc='PostgreSQL modules for PHP'
   depends=("${pkgbase}" 'postgresql-libs')
   provides=("${_pkgbase}-pgsql=$pkgver")
@@ -490,7 +490,7 @@ package_php56-pgsql() {
   install -D -m755 ${srcdir}/build-php/modules/pdo_pgsql.so ${pkgdir}/usr/lib/${pkgbase}/modules/pdo_pgsql.so
 }
 
-package_php56-pspell() {
+package_php5-pspell() {
   pkgdesc='pspell module for PHP'
   depends=("${pkgbase}" 'aspell')
   provides=("${_pkgbase}-pspell=$pkgver")
@@ -498,7 +498,7 @@ package_php56-pspell() {
   install -D -m755 ${srcdir}/build-php/modules/pspell.so ${pkgdir}/usr/lib/${pkgbase}/modules/pspell.so
 }
 
-package_php56-snmp() {
+package_php5-snmp() {
   pkgdesc='snmp module for PHP'
   depends=("${pkgbase}" 'net-snmp')
   provides=("${_pkgbase}-snmp=$pkgver")
@@ -506,7 +506,7 @@ package_php56-snmp() {
   install -D -m755 ${srcdir}/build-php/modules/snmp.so ${pkgdir}/usr/lib/${pkgbase}/modules/snmp.so
 }
 
-package_php56-sqlite() {
+package_php5-sqlite() {
   pkgdesc='sqlite module for PHP'
   depends=("${pkgbase}" 'sqlite')
   provides=("${_pkgbase}-sqlite=$pkgver")
@@ -515,7 +515,7 @@ package_php56-sqlite() {
   install -D -m755 ${srcdir}/build-php/modules/pdo_sqlite.so ${pkgdir}/usr/lib/${pkgbase}/modules/pdo_sqlite.so
 }
 
-package_php56-tidy() {
+package_php5-tidy() {
   pkgdesc='tidy module for PHP'
   depends=("${pkgbase}" 'tidyhtml')
   provides=("${_pkgbase}-tidy=$pkgver")
@@ -523,7 +523,7 @@ package_php56-tidy() {
   install -D -m755 ${srcdir}/build-php/modules/tidy.so ${pkgdir}/usr/lib/${pkgbase}/modules/tidy.so
 }
 
-package_php56-xsl() {
+package_php5-xsl() {
   pkgdesc='xsl module for PHP'
   depends=("${pkgbase}" 'libxslt')
   provides=("${_pkgbase}-xsl=$pkgver")
