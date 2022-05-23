@@ -417,7 +417,7 @@ package_php5-embed() {
   depends=("${pkgbase}" 'libnsl')
   provides=("${_pkgbase}-embed=$pkgver")
 
-  install -D -m755 "${srcdir}/build-embed/libs/libphp5.so" "${pkgdir}/usr/lib/libphp56.so"
+  install -D -m755 "${srcdir}/build-embed/libs/libphp5.so" "${pkgdir}/usr/lib/libphp5.so"
   install -D -m644 "${srcdir}/${_srcdir}/sapi/embed/php_embed.h" "${pkgdir}/usr/include/${pkgbase}/sapi/embed/php_embed.h"
   set +u
 }
