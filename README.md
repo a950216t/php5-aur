@@ -7,9 +7,9 @@ git clone --recursive https://github.com/a950216t/php5-aur
 
 cd php5-aur/
 
-makepkg -g >> PKGBUILD
+gpg --recv-keys --keyserver pgp.mit.edu C2BF0BC433CFC8B3
 
-gpg --recv-keys --keyserver keys.gnupg.net C2BF0BC433CFC8B3
+makepkg -g >> PKGBUILD
 
 makepkg -si
 
