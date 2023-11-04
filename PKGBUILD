@@ -13,19 +13,19 @@
 # AUR php55 Original maintainer: Raphaël Doursenaud <rdoursenaud@gmail.com>
 # AUR php53 Original maintainer: Felix Yan <felixonmars@archlinux.org>
 ###############################################################################
-_phpbase="56"
+_phpbase="5"
 _suffix=""
 pkgver="5.6.40"
 pkgrel="10"
-pkgbase="php56"
+pkgbase="php5"
 pkgdesc="PHP 5.6.40 compiled as to not conflict with mainline php"
 _cppflags=" -DU_USING_ICU_NAMESPACE=1  -DU_DEFINE_FALSE_AND_TRUE=1 "
 _build_apache_cfg="etc/httpd/conf/extra"
 _build_bundled_gd="0"
-_build_conf_d="etc/php56/conf.d"
+_build_conf_d="etc/php5/conf.d"
 _build_forced_openssl_11="0"
-_build_fpm_name="php-fpm56"
-_build_fpm_service_name="php56-fpm"
+_build_fpm_name="php-fpm5"
+_build_fpm_service_name="php5-fpm"
 _build_icu_src_dir="icu/source"
 _build_ini_per_sapi="0"
 _build_mysql_socket="/run/mysqld/mysqld.sock"
@@ -33,13 +33,13 @@ _build_openssl_v10_patch="0"
 _build_openssl_v11_patch="1"
 _build_per_sapi="0"
 _build_phpdbg="1"
-_build_sapi_ini_apache="etc/php56"
-_build_sapi_ini_cgi="etc/php56"
-_build_sapi_ini_cli="etc/php56"
-_build_sapi_ini_embed="etc/php56"
-_build_sapi_ini_fpm="etc/php56"
-_build_sapi_ini_litespeed="etc/php56"
-_build_sapi_ini_phpdbg="etc/php56"
+_build_sapi_ini_apache="etc/php5"
+_build_sapi_ini_cgi="etc/php5"
+_build_sapi_ini_cli="etc/php5"
+_build_sapi_ini_embed="etc/php5"
+_build_sapi_ini_fpm="etc/php5"
+_build_sapi_ini_litespeed="etc/php5"
+_build_sapi_ini_phpdbg="etc/php5"
 _build_sapi_litespeed="--with-litespeed"
 _build_shared_gd="1"
 _build_shared_json="1"
@@ -64,69 +64,69 @@ _priority_xml="15"
 _suffix=""
 _suffix_so="5"
 pkgname=(
-    "php56"
-    "php56-cli"
-    "php56-cgi"
-    "php56-fpm"
-    "php56-embed"
-    "php56-apache"
-    "php56-litespeed"
-    "php56-pear"
-    "php56-pecl"
-    "php56-phpdbg"
-    "php56-xml"
-    "php56-xsl"
-    "php56-xmlreader"
-    "php56-xmlwriter"
-    "php56-wddx"
-    "php56-dom"
-    "php56-simplexml"
-    "php56-pdo"
-    "php56-mysql"
-    "php56-phar"
-    "php56-pcntl"
-    "php56-posix"
-    "php56-shmop"
-    "php56-sockets"
-    "php56-sysvmsg"
-    "php56-sysvsem"
-    "php56-sysvshm"
-    "php56-tokenizer"
-    "php56-dba"
-    "php56-pgsql"
-    "php56-odbc"
-    "php56-firebird"
-    "php56-interbase"
-    "php56-dblib"
-    "php56-sqlite"
-    "php56-mssql"
-    "php56-gd"
-    "php56-exif"
-    "php56-tidy"
-    "php56-iconv"
-    "php56-xmlrpc"
-    "php56-bcmath"
-    "php56-gmp"
-    "php56-zip"
-    "php56-bz2"
-    "php56-json"
-    "php56-fileinfo"
-    "php56-ctype"
-    "php56-recode"
-    "php56-mbstring"
-    "php56-pspell"
-    "php56-enchant"
-    "php56-intl"
-    "php56-calendar"
-    "php56-gettext"
-    "php56-soap"
-    "php56-ftp"
-    "php56-curl"
-    "php56-snmp"
-    "php56-ldap"
-    "php56-imap"
-    "php56-mcrypt"
-    "php56-opcache"
+    "php5"
+    "php5-cli"
+    "php5-cgi"
+    "php5-fpm"
+    "php5-embed"
+    "php5-apache"
+    "php5-litespeed"
+    "php5-pear"
+    "php5-pecl"
+    "php5-phpdbg"
+    "php5-xml"
+    "php5-xsl"
+    "php5-xmlreader"
+    "php5-xmlwriter"
+    "php5-wddx"
+    "php5-dom"
+    "php5-simplexml"
+    "php5-pdo"
+    "php5-mysql"
+    "php5-phar"
+    "php5-pcntl"
+    "php5-posix"
+    "php5-shmop"
+    "php5-sockets"
+    "php5-sysvmsg"
+    "php5-sysvsem"
+    "php5-sysvshm"
+    "php5-tokenizer"
+    "php5-dba"
+    "php5-pgsql"
+    "php5-odbc"
+    "php5-firebird"
+    "php5-interbase"
+    "php5-dblib"
+    "php5-sqlite"
+    "php5-mssql"
+    "php5-gd"
+    "php5-exif"
+    "php5-tidy"
+    "php5-iconv"
+    "php5-xmlrpc"
+    "php5-bcmath"
+    "php5-gmp"
+    "php5-zip"
+    "php5-bz2"
+    "php5-json"
+    "php5-fileinfo"
+    "php5-ctype"
+    "php5-recode"
+    "php5-mbstring"
+    "php5-pspell"
+    "php5-enchant"
+    "php5-intl"
+    "php5-calendar"
+    "php5-gettext"
+    "php5-soap"
+    "php5-ftp"
+    "php5-curl"
+    "php5-snmp"
+    "php5-ldap"
+    "php5-imap"
+    "php5-mcrypt"
+    "php5-opcache"
 )
 source=(
     "make-tests.patch"
@@ -239,20 +239,20 @@ _sapi_depends=(
     "libedit"
 )
 _ext_depends_snmp=(
-    "php56=5.6.40"
+    "php5=5.6.40"
     "net-snmp"
     "openssl"
 )
 _ext_depends_ftp=(
-    "php56=5.6.40"
+    "php5=5.6.40"
     "openssl"
 )
 _ext_depends_intl=(
-    "php56=5.6.40"
+    "php5=5.6.40"
     "icu"
 )
 _ext_depends_imap=(
-    "php56=5.6.40"
+    "php5=5.6.40"
     "pam"
     "krb5"
     "c-client"
@@ -260,43 +260,43 @@ _ext_depends_imap=(
     "openssl"
 )
 _ext_depends_gd=(
-    "php56=5.6.40"
+    "php5=5.6.40"
     "gd"
     "libvpx"
 )
 _ext_depends_mysql=(
-    "php56=5.6.40"
-    "php56-pdo=5.6.40"
+    "php5=5.6.40"
+    "php5-pdo=5.6.40"
 )
 _ext_depends_dba=(
-    "php56=5.6.40"
+    "php5=5.6.40"
     "db5.3"
 )
 _ext_depends_odbc=(
-    "php56=5.6.40"
+    "php5=5.6.40"
     "unixodbc"
-    "php56-pdo=5.6.40"
+    "php5-pdo=5.6.40"
 )
 _ext_depends_pgsql=(
-    "php56=5.6.40"
+    "php5=5.6.40"
     "postgresql-libs"
-    "php56-pdo=5.6.40"
+    "php5-pdo=5.6.40"
 )
 _ext_depends_firebird=(
-    "php56=5.6.40"
+    "php5=5.6.40"
     "libfbclient"
-    "php56-pdo=5.6.40"
+    "php5-pdo=5.6.40"
 )
 _ext_depends_sqlite=(
-    "php56=5.6.40"
+    "php5=5.6.40"
     "sqlite"
-    "php56-pdo=5.6.40"
+    "php5-pdo=5.6.40"
 )
 _ext_depends_mbstring=(
-    "php56=5.6.40"
+    "php5=5.6.40"
 )
 _ext_depends_openssl=(
-    "php56=5.6.40"
+    "php5=5.6.40"
     "krb5"
     "e2fsprogs"
     "openssl"
@@ -486,7 +486,7 @@ prepare() {
         patch -p1 -i "../${patch_name}"
     done
 
-    if ((_phpbase <= 53)); then
+    if ((_phpbase == 53)); then
         PHP_AUTOCONF="/usr/bin/autoconf-2.13" ./buildconf --force
     else
         ./buildconf --force
@@ -776,7 +776,7 @@ _install_module() {
 ###############################################################################
 
 # Main package
-package_php56() {
+package_php5() {
     # Binary names
     pkgdesc='PHP. A general-purpose scripting language that is especially suited to web development'
     depends=('zlib' 'pcre' 'libedit')
@@ -826,7 +826,7 @@ package_php56() {
 }
 
 # Cli + phar
-package_php56-cli() {
+package_php5-cli() {
     _sapi="cli"
     pkgdesc="cli (command-line executable) version for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
@@ -846,7 +846,7 @@ package_php56-cli() {
 # End cli
 
 # CGI
-package_php56-cgi() {
+package_php5-cgi() {
     _sapi="cgi"
     pkgdesc="CGI and FCGI SAPI for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
@@ -873,7 +873,7 @@ package_php56-cgi() {
 # CGI end
 
 # Apache
-package_php56-apache() {
+package_php5-apache() {
     _sapi="apache"
     _build_mod_php_so="libphp${_suffix_so}.so"
     _build_mod_php_module="php_module${_suffix_so}"
@@ -911,7 +911,7 @@ package_php56-apache() {
 # Apache end
 
 # FPM
-package_php56-fpm() {
+package_php5-fpm() {
     _sapi="fpm"
     install="php-fpm.install"
     pkgdesc="FastCGI Process Manager for ${pkgbase}"
@@ -941,7 +941,7 @@ package_php56-fpm() {
 # FPM end
 
 # embed sapi
-package_php56-embed() {
+package_php5-embed() {
     _sapi="embed"
     pkgdesc="Embedded PHP SAPI library for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'ncurses' 'systemd-libs' 'libxcrypt' 'acl' 'ncurses')
@@ -958,14 +958,14 @@ package_php56-embed() {
         backup=("${_build_sapi_ini_embed}/php.ini")
     fi
     make -j1 INSTALL_ROOT="${pkgdir}" PHP_SAPI=embed install-sapi
-    mv "${pkgdir}/usr/lib/libphp${_suffix_so}.so" "${pkgdir}/usr/lib/lib${pkgbase}.so"
+    #mv "${pkgdir}/usr/lib/libphp${_suffix_so}.so" "${pkgdir}/usr/lib/lib${pkgbase}.so"
     popd
     patchelf --set-soname "lib${pkgbase}.so" "${pkgdir}/usr/lib/lib${pkgbase}.so"
 }
 # embed sapi end
 
 # phpdbg sapi
-package_php56-phpdbg() {
+package_php5-phpdbg() {
     _sapi="phpdbg"
     options=('!emptydirs')
     pkgdesc="Interactive PHP debugger for ${pkgbase} ($_sapi)"
@@ -987,7 +987,7 @@ package_php56-phpdbg() {
 # phpdbg sapi end
 
 # litespeed sapi
-package_php56-litespeed() {
+package_php5-litespeed() {
     _sapi="litespeed"
     pkgdesc="LiteSpeed SAPI for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
@@ -1015,7 +1015,7 @@ package_php56-litespeed() {
 ###############################################################################
 
 # PEAR
-package_php56-pear() {
+package_php5-pear() {
     pkgdesc="PHP Extension and Application Repository (PEAR) for ${pkgbase}"
     depends=(
         "${pkgbase}=${pkgver}"
@@ -1082,7 +1082,7 @@ package_php56-pear() {
 # PEAR end
 
 # PECL
-package_php56-pecl() {
+package_php5-pecl() {
     pkgdesc="PHP Extension Community Library (PECL) for ${pkgbase}"
     depends=("php${_phpbase}-pear${_suffix}=${pkgver}")
     _target="${pkgbase/php/pecl}"
@@ -1095,21 +1095,21 @@ package_php56-pecl() {
 ###############################################################################
 
 # OpenSSL
-package_php56-openssl() {
+package_php5-openssl() {
     pkgdesc="OpenSSL module for ${pkgbase}"
     depends=("${_ext_depends_openssl[@]}")
     _install_module openssl
 }
 
 # Json
-package_php56-json() {
+package_php5-json() {
     pkgdesc="json module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
     _install_module json
 }
 
 # pdo
-package_php56-pdo() {
+package_php5-pdo() {
     pkgdesc="pdo module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module pdo
@@ -1117,7 +1117,7 @@ package_php56-pdo() {
 
 
 # mbstring
-package_php56-mbstring() {
+package_php5-mbstring() {
     pkgdesc="mbstring module for ${pkgbase}"
     depends=("${_ext_depends_mbstring[@]}")
    _install_module mbstring
@@ -1125,7 +1125,7 @@ package_php56-mbstring() {
 
 
 # phar
-package_php56-phar() {
+package_php5-phar() {
     pkgdesc="phar module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module phar
@@ -1137,51 +1137,51 @@ package_php56-phar() {
 ###############################################################################
 
 # XML modules combined package
-package_php56-xml() {
+package_php5-xml() {
     pkgdesc="xml modules for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'libxml2')
     _install_module xml
 }
 
-package_php56-wddx() {
+package_php5-wddx() {
     pkgdesc="wddx module for ${pkgbase}"
     depends=("php${_phpbase}-xml${_suffix}=${pkgver}")
     _install_module wddx
 }
 
-package_php56-simplexml() {
+package_php5-simplexml() {
     pkgdesc="simplexml module for ${pkgbase}"
     depends=("php${_phpbase}-xml${_suffix}=${pkgver}")
     _install_module simplexml
 }
 
-package_php56-dom() {
+package_php5-dom() {
     pkgdesc="dom module for ${pkgbase}"
     depends=("php${_phpbase}-xml${_suffix}=${pkgver}")
     _install_module dom
 }
 
-package_php56-xmlreader() {
+package_php5-xmlreader() {
     pkgdesc="xmlreader module for ${pkgbase}"
     depends=("php${_phpbase}-xml${_suffix}=${pkgver}")
     _install_module xmlreader
 }
 
-package_php56-xmlwriter() {
+package_php5-xmlwriter() {
     pkgdesc="xmlwriter module for ${pkgbase}"
     depends=("php${_phpbase}-xml${_suffix}=${pkgver}")
     _install_module xmlwriter
 }
 
 # Tidy
-package_php56-tidy() {
+package_php5-tidy() {
     pkgdesc="tidy module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'tidy')
     _install_module tidy
 }
 
 # XSL
-package_php56-xsl() {
+package_php5-xsl() {
     pkgdesc="xsl module for ${pkgbase}"
     depends=("php${_phpbase}-xml${_suffix}=${pkgver}" "php${_phpbase}-dom${_suffix}=${pkgver}")
     depends+=('libxslt')
@@ -1193,7 +1193,7 @@ package_php56-xsl() {
 ###############################################################################
 
 # MySQL
-package_php56-mysql() {
+package_php5-mysql() {
     pkgdesc="MySQL modules for ${pkgbase}"
     depends=("${_ext_depends_mysql[@]}")
     _install_module mysqlnd
@@ -1203,7 +1203,7 @@ package_php56-mysql() {
 }
 
 # pdo_sqlite + sqlite3
-package_php56-sqlite() {
+package_php5-sqlite() {
     pkgdesc="sqlite module for ${pkgbase}"
     depends=("${_ext_depends_sqlite[@]}")
     _install_module sqlite3
@@ -1211,7 +1211,7 @@ package_php56-sqlite() {
 }
 
 # ODBC
-package_php56-odbc() {
+package_php5-odbc() {
     pkgdesc="ODBC modules for ${pkgbase}"
     depends=("${_ext_depends_odbc[@]}")
     _install_module odbc
@@ -1219,7 +1219,7 @@ package_php56-odbc() {
 }
 
 # PostgreSQL
-package_php56-pgsql() {
+package_php5-pgsql() {
     pkgdesc="PostgreSQL modules for ${pkgbase}"
     depends=("${_ext_depends_pgsql[@]}")
     _install_module pgsql
@@ -1227,35 +1227,35 @@ package_php56-pgsql() {
 }
 
 # interbase
-package_php56-interbase() {
+package_php5-interbase() {
     pkgdesc="interbase module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" "libfbclient")
     _install_module interbase
 }
 
 # firebird
-package_php56-firebird() {
+package_php5-firebird() {
     pkgdesc="pdo_firebird module for ${pkgbase}"
     depends=("${_ext_depends_firebird[@]}")
     _install_module pdo_firebird
 }
 
 # pdo_dblib
-package_php56-dblib() {
+package_php5-dblib() {
     depends=("${pkgbase}=${pkgver}" 'freetds')
     pkgdesc="pdo_dblib module for ${pkgbase}"
     _install_module pdo_dblib
 }
 
 # mssql
-package_php56-mssql() {
+package_php5-mssql() {
     depends=("${pkgbase}=${pkgver}" 'freetds')
     pkgdesc="mssql module for ${pkgbase}"
     _install_module mssql
 }
 
 # Dba
-package_php56-dba() {
+package_php5-dba() {
     pkgdesc="dba module for ${pkgbase}"
     depends=("${_ext_depends_dba[@]}")
     _install_module dba
@@ -1266,7 +1266,7 @@ package_php56-dba() {
 ###############################################################################
 
 # Intl
-package_php56-intl() {
+package_php5-intl() {
     pkgdesc="intl module for ${pkgbase}"
     depends=("${_ext_depends_intl[@]}")
     if ((_build_with_custom_icu)); then
@@ -1277,28 +1277,28 @@ package_php56-intl() {
 }
 
 # Recode
-package_php56-recode() {
+package_php5-recode() {
     pkgdesc="recode module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'recode')
     _install_module recode
 }
 
 # gettext
-package_php56-gettext() {
+package_php5-gettext() {
     pkgdesc="gettext module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module gettext
 }
 
 # iconv
-package_php56-iconv() {
+package_php5-iconv() {
     pkgdesc="iconv module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module iconv
 }
 
 # calendar
-package_php56-calendar() {
+package_php5-calendar() {
     pkgdesc="calendar module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module calendar
@@ -1310,21 +1310,21 @@ package_php56-calendar() {
 ###############################################################################
 
 # GD
-package_php56-gd() {
+package_php5-gd() {
     pkgdesc="gd module for ${pkgbase}"
     depends=("${_ext_depends_gd[@]}")
     _install_module gd
 }
 
 # exif
-package_php56-exif() {
+package_php5-exif() {
     pkgdesc="exif module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module exif
 }
 
 # fileinfo
-package_php56-fileinfo() {
+package_php5-fileinfo() {
     pkgdesc="fileinfo module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module fileinfo
@@ -1336,14 +1336,14 @@ package_php56-fileinfo() {
 ###############################################################################
 
 # bcmath
-package_php56-bcmath() {
+package_php5-bcmath() {
     pkgdesc="bcmath module for ${pkgbase}"
     depends=("${pkgbase}")
     _install_module bcmath
 }
 
 # gmp
-package_php56-gmp() {
+package_php5-gmp() {
     pkgdesc="gmp module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'gmp')
     _install_module gmp
@@ -1354,14 +1354,14 @@ package_php56-gmp() {
 ###############################################################################
 
 # Enchant
-package_php56-enchant() {
+package_php5-enchant() {
     pkgdesc="enchant module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'enchant' 'libvoikko' 'hspell' 'hunspell' 'nuspell' 'aspell')
     _install_module enchant
 }
 
 # Pspell
-package_php56-pspell() {
+package_php5-pspell() {
     pkgdesc="pspell module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'aspell')
     _install_module pspell
@@ -1372,14 +1372,14 @@ package_php56-pspell() {
 ###############################################################################
 
 # bz2
-package_php56-bz2() {
+package_php5-bz2() {
     pkgdesc="bz2 module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'bzip2')
     _install_module bz2
 }
 
 # Zip
-package_php56-zip() {
+package_php5-zip() {
     pkgdesc="zip module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'libzip')
     _install_module zip
@@ -1390,56 +1390,56 @@ package_php56-zip() {
 ###############################################################################
 
 # curl
-package_php56-curl() {
+package_php5-curl() {
     pkgdesc="curl module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" "curl")
     _install_module curl
 }
 
 # SOAP
-package_php56-soap() {
+package_php5-soap() {
     pkgdesc="soap module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'libxml2')
     _install_module soap
 }
 
 # FTP
-package_php56-ftp() {
+package_php5-ftp() {
     pkgdesc="FTP module for ${pkgbase}"
     depends=("${_ext_depends_ftp[@]}")
     _install_module ftp
 }
 
 # ldap
-package_php56-ldap() {
+package_php5-ldap() {
     pkgdesc="ldap module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'libldap' 'libsasl')
     _install_module ldap
 }
 
 # SNMP
-package_php56-snmp() {
+package_php5-snmp() {
     pkgdesc="snmp module for ${pkgbase}"
     depends=("${_ext_depends_snmp[@]}")
     _install_module snmp
 }
 
 # XML-RPC
-package_php56-xmlrpc() {
+package_php5-xmlrpc() {
     pkgdesc="xmlrpc module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'libxml2')
     _install_module xmlrpc
 }
 
 # Imap
-package_php56-imap() {
+package_php5-imap() {
     pkgdesc="imap module for ${pkgbase}"
     depends=("${_ext_depends_imap[@]}")
    _install_module imap
 }
 
 # sockets
-package_php56-sockets() {
+package_php5-sockets() {
     pkgdesc="sockets module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module sockets
@@ -1450,14 +1450,14 @@ package_php56-sockets() {
 ###############################################################################
 
 # Sodium
-package_php56-sodium() {
+package_php5-sodium() {
     pkgdesc="sodium (libsodium) module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" "libsodium")
     _install_module sodium
 }
 
 # Mcrypt
-package_php56-mcrypt() {
+package_php5-mcrypt() {
     pkgdesc="mcrypt module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'libmcrypt')
     _install_module mcrypt
@@ -1469,7 +1469,7 @@ package_php56-mcrypt() {
 ###############################################################################
 
 # Opcache
-package_php56-opcache() {
+package_php5-opcache() {
     pkgdesc="opcache zend module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
     _install_module opcache
@@ -1480,42 +1480,42 @@ package_php56-opcache() {
 ###############################################################################
 
 # posix
-package_php56-posix() {
+package_php5-posix() {
     pkgdesc="posix module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module posix
 }
 
 # pcntl
-package_php56-pcntl() {
+package_php5-pcntl() {
     pkgdesc="pcntl module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module pcntl
 }
 
 # shmop
-package_php56-shmop() {
+package_php5-shmop() {
     pkgdesc="shmop module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module shmop
 }
 
 # sysvmsg
-package_php56-sysvmsg() {
+package_php5-sysvmsg() {
     pkgdesc="sysvmsg module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module sysvmsg
 }
 
 # sysvsem
-package_php56-sysvsem() {
+package_php5-sysvsem() {
     pkgdesc="sysvsem module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module sysvsem
 }
 
 # sysvshm
-package_php56-sysvshm() {
+package_php5-sysvshm() {
     pkgdesc="sysvshm module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module sysvshm
@@ -1526,28 +1526,28 @@ package_php56-sysvshm() {
 ###############################################################################
 
 # Ffi
-package_php56-ffi() {
+package_php5-ffi() {
     pkgdesc="ffi module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'libffi')
    _install_module ffi
 }
 
 # ctype
-package_php56-ctype() {
+package_php5-ctype() {
     pkgdesc="ctype module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module ctype
 }
 
 # tokenizer
-package_php56-tokenizer() {
+package_php5-tokenizer() {
     pkgdesc="tokenizer module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}")
    _install_module tokenizer
 }
 
 # libedit/readline
-package_php56-readline() {
+package_php5-readline() {
     pkgdesc="readline (libedit version) module for ${pkgbase}"
     depends=("${pkgbase}=${pkgver}" 'libedit')
    _install_module readline
