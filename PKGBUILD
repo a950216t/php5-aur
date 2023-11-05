@@ -207,7 +207,7 @@ makedepends=(
     "net-snmp"
     "libsasl"
     "libldap"
-    "c-client"
+    #"c-client"
     "pam"
     "libmcrypt"
 )
